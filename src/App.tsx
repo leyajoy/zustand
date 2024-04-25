@@ -23,11 +23,23 @@ const OtherComponent = ({ count }: { count: number }) => {
 	}, []);
 
 	return (
-		<div>
-			{count}
-			<div className=' flex w-28 justify-between items-center bg-orange-500'>
-				<button onClick={decrement}>Decrement</button>
-				<button onClick={incrementAsync}>IncrementAsync</button>
+		<div className=' block justify-center items-center'>
+			<div className=' flex gap-12'>
+				<button
+					onClick={decrement}
+					className=' h-12 w-28 bg-orange-400 rounded-md'
+				>
+					Decrement
+				</button>
+				<div className=' w-14 h-14 rounded-full bg-green-300  flex items-center justify-center'>
+					{count}
+				</div>
+				<button
+					onClick={incrementAsync}
+					className=' h-12 w-28 bg-orange-400 rounded-md'
+				>
+					Increment
+				</button>
 			</div>
 		</div>
 	);
